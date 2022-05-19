@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+msgstr "Project-Id-Version: tygh\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+
+msgctxt "Addons::name::sd_departments"
+msgid "Simtech Development: Departments"
+msgstr "Simtech Development: Отделы"
+
+msgctxt "Addons::description::sd_departments"
+msgid "Allows you to add employee departments"
+msgstr "Позволит вам добавлять отделы с сотрудниками"
+
+msgctxt "SettingSections::sd_departments.departments"
+msgid "Departments"
+msgstr "Отделы"

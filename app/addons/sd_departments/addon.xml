@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>sd_departments</id>
+    <version>4.14.3.0</version>
+    <priority>1200</priority>
+    <position>10</position>
+    <status>active</status>
+    <has_icon>Y</has_icon>
+    <queries>
+        <item for="install">
+            CREATE TABLE ?:departments (
+                department_id INT(11) unsigned NOT NULL AUTO_INCREMENT,
+                status varchar(1) NOT NULL default 'A',
+                timestamp INT(11) unsigned NOT NULL default '0',
+                upd_timestamp INT(11) unsigned NOT NULL default '0',
+                head_id INT(11) unsigned NOT NULL default '0',
+                employee_id INT(11) unsigned NOT NULL default '0',
+                KEY (head_id),
+                KEY (department_id),
+                PRIMARY KEY (department_id)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        </item>
+        <item for="install">
+            CREATE TABLE ?:department_descriptions (
+                department_id INT(11) unsigned NOT NULL default '0',
+                lang_code char(2) NOT NULL default '',
+                department varchar(255) NOT NULL default '',
+                description text null,
+                PRIMARY KEY (department_id, lang_code)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        </item>
+        <item for="install">
+            CREATE TABLE ?:department_employee (
+                department_id INT(11) unsigned NOT NULL default '0',
+                employee_id INT(11) unsigned NOT NULL default '0',
+                KEY (department_id),
+                KEY (employee_id),
+                PRIMARY KEY (department_id, employee_id)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        </item>
+        <item for="uninstall">DROP TABLE IF EXISTS ?:departments;</item>
+        <item for="uninstall">DROP TABLE IF EXISTS ?:department_descriptions;</item>
+        <item for="uninstall">DROP TABLE IF EXISTS ?:department_employee;</item>
+    </queries>
+</addon>
