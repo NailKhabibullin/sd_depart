@@ -44,12 +44,12 @@
                                 {/if}
                                 <td class="departments-list__image">
                                     {include
-                                            file="common/image.tpl"
-                                            image=$department.main_pair.icon|default:$department.main_pair.detailed
-                                            image_id=$department.main_pair.image_id
-                                            image_width="50"
-                                            image_height="50"
-                                            href="profiles.update_department?department_id=`$department.department_id`"|fn_url
+                                        file="common/image.tpl"
+                                        image=$department.main_pair.icon|default:$department.main_pair.detailed
+                                        image_id=$department.main_pair.image_id
+                                        image_width="50"
+                                        image_height="50"
+                                        href="profiles.update_department?department_id=`$department.department_id`"|fn_url
                                     }
                                 </td>
                                 <td class="{$no_hide_input}" data-th="{__("name")}">

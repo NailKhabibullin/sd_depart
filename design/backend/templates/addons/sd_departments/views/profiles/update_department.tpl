@@ -85,8 +85,6 @@
                 <p class="muted description">{__("select_employees")}</p>
             </div>
         </div>
-
-
     </div>
 
     <!--content_general-->
