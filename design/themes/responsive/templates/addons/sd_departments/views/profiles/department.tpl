@@ -15,9 +15,9 @@
 
 <div class="ty-mainbox-body">
     <div class="row-fluid">
-            <bdi>
-                <a>{$department_data.employee_id|fn_get_user_name}</a>
-            </bdi>
+        <bdi>
+            <a>{$department_data.employee_id|fn_get_user_name}</a>
+        </bdi>
     </div>
 </div>
 
