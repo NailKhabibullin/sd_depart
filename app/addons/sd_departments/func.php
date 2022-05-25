@@ -18,10 +18,10 @@ function fn_get_department_data($department_id = 0, $lang_code = CART_LANGUAGE)
 
 function fn_get_departments($params = [], $items_per_page = 0, $lang_code = CART_LANGUAGE)
 {
-    $default_params = array(
+    $default_params = [
         'page' => 1,
         'items_per_page' => 6
-    );
+    ];
 
     $params = array_merge($default_params, $params);
 
@@ -29,15 +29,17 @@ function fn_get_departments($params = [], $items_per_page = 0, $lang_code = CART
         $params['status'] = 'A';
     }
 
-    $sortings = array(
+    $sortings = [
         'timestamp' => '?:departments.timestamp',
         'name' => '?:department_descriptions.department',
         'status' => '?:departments.status',
         'head_id' => '?:departments.head_id',
         'employee_id' => '?:departments.employee_id',
-    );
+    ];
 
-    $condition = $limit = $join = '';
+    $condition = '';
+    $limit = '';
+    $join = '';
 
     if (!empty($params['limit'])) {
         $limit = db_quote(' LIMIT 0, ?i', $params['limit']);
