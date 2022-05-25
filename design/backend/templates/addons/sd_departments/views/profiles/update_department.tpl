@@ -129,7 +129,8 @@
     title=$title
     content=$smarty.capture.mainbox
     buttons=$smarty.capture.buttons
-    select_languages=true}
+    select_languages=true
+}
 
 
 {** department section **}
