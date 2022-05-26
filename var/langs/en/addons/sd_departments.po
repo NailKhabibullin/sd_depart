@@ -15,3 +15,7 @@ msgstr "Allows you to add employee departments"
 msgctxt "SettingSections::sd_departments.departments"
 msgid "Departments"
 msgstr "Departments"
+
+msgctxt "Languages::sd_departments.departments"
+msgid "Departments"
+msgstr "Departments"
