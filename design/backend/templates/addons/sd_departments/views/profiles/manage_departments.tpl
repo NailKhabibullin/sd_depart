@@ -145,7 +145,7 @@
 {/capture}
 
 {hook name="departments:manage_mainbox_params"}
-    {$page_title = "Отделы"}
+    {$page_title = __('sd_departments.departments')}
     {$select_languages = true}
 {/hook}
 
@@ -157,6 +157,5 @@
     select_languages=$select_languages
     sidebar=$smarty.capture.sidebar
 }
-
 
 {** ad section **}

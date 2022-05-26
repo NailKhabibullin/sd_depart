@@ -18,10 +18,10 @@ if ($mode == 'departments') {
     Tygh::$app['view']->assign('search', $search);
     Tygh::$app['view']->assign('columns', 3);
 
-    fn_add_breadcrumb("Отделы");
+    fn_add_breadcrumb(__('sd_departments.departments'));
 
 } elseif ($mode == 'department') {
-    //fn_print_die('test');
+
     $department_data = [];
     $department_id = !empty($_REQUEST['department_id']) ? $_REQUEST['department_id'] : 0;
     $department_data = fn_get_department_data($department_id, CART_LANGUAGE);
@@ -31,7 +31,8 @@ if ($mode == 'departments') {
     }
 
     Tygh::$app['view']->assign('department_data', $department_data);
-    fn_add_breadcrumb(["Отделы", $department_data['department']]);
+
+    fn_add_breadcrumb($department_data['department']);
 
     $employee_id = !empty($department_data['employee_id']) ? fn_get_user_name($department_data['employee_id']) : [];
 }

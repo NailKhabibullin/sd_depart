@@ -16,3 +16,7 @@ msgstr "Позволит вам добавлять отделы с сотруд�
 msgctxt "SettingSections::sd_departments.departments"
 msgid "Departments"
 msgstr "Отделы"
+
+msgctxt "Languages::sd_departments.departments"
+msgid "Departments"
+msgstr "Отделы"
