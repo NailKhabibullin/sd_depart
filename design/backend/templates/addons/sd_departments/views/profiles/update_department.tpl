@@ -132,5 +132,4 @@
     select_languages=true
 }
 
-
 {** department section **}
